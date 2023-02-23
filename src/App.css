@@ -1,7 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, calc(50vh - 5px)); /* 50vh - 5px takes up 50% of viewport height minus the gap size */
+  grid-template-rows: repeat(2, calc(50vh - 5px));
   gap: 10px;
-  height: 100vh; /* set the height of the grid to the full viewport height */
+  height: 100vh; 
 }
