@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Weather.css';
 
 function Weather() {
   const [city, setCity] = useState('');
@@ -11,14 +12,25 @@ function Weather() {
   }
 
   return (
-    <div>
-      <input type="text" value={city} onChange={(e) => setCity(e.target.value)} />
-      <button onClick={getWeatherData}>Get Weather</button>
+    <div className="weather-container">
+      <h1>Weather App</h1>
+      <div className="form-container">
+        <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="Enter City" />
+        <button onClick={getWeatherData}>Get Weather</button>
+      </div>
       {weatherData && (
-        <div>
+        <div className="weather-data-container">
           <h2>{weatherData.name}</h2>
-          <p>Temperature: {weatherData.main.temp}</p>
-          <p>Weather: {weatherData.weather[0].main}</p>
+          <div className="temperature-container">
+            <p>Temperature: {Math.round(weatherData.main.temp - 273.15)}°C</p>
+            <p>Feels Like: {Math.round(weatherData.main.feels_like - 273.15)}°C</p>
+            <p>Humidity: {weatherData.main.humidity}%</p>
+          </div>
+          <div className="weather-description-container">
+            <p>{weatherData.weather[0].main}</p>
+            <img src={`http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`} alt="Weather Icon" />
+            <p>{weatherData.weather[0].description}</p>
+          </div>
         </div>
       )}
     </div>

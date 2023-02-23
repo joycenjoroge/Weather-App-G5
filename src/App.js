@@ -1,3 +1,5 @@
+import React from "react";
+import ActivityList from "./ActivityList";
 import './App.css';
 import Component2 from './Component2';
 import Component3 from './Component3';
@@ -16,6 +18,7 @@ function App() {
       <Component2 />
       <Component3 />
       <Component4 />
+      <ActivityList />
 
       </div>
       
