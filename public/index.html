@@ -3,41 +3,15 @@
   <head>
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
   </head>
   <body>
-    <nav>
-      <h1>Weather App</h1>
-      <ul>
-        <li>Home</li>
-        <li>Weather</li>
-        <li>Activities</li>
-        <li>Share</li>
-      </ul>
-    </nav>
-    <main>
-      <section>
-        <h2>Weather</h2>
-        <form>
-          <input type="text" placeholder="Enter a city">
-          <button type="submit">Search</button>
-        </form>
-        <div id="weather-display"></div>
-      </section>
-      <section>
-        <h2>Activities</h2>
-        <ul id="activity-list-clear"></ul>
-        <ul id="activity-list-snow"></ul>
-        <ul id="activity-list-rain"></ul>
-      </section>
-      <section>
-        <h2>Selected Activities</h2>
-        <ul id="selected-activities"></ul>
-      </section>
-      <section>
-        <h2>Share</h2>
-        <button id="share-button">Share</button>
-      </section>
-    </main>
+    <div id="root"></div>
+    <script src="Weather.js"></script>
+    <script>
+      ReactDOM.render(React.createElement(Weather), document.getElementById('root'));
+    </script>
     <script src="app.js"></script>
   </body>
 </html>
