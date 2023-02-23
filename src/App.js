@@ -25,11 +25,3 @@ function App() {
 
 export default App;
 
-// <Navigation />
-//         <h2>Component1</h2>
-//       </div>
-//       <div className="grid-container">
-//         <Component1 />
-//         <Component2 />
-//         <Component3 />
-//         <Component4 />
