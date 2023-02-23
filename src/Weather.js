@@ -5,7 +5,7 @@ function Weather() {
   const [weatherData, setWeatherData] = useState(null);
 
   const getWeatherData = async () => {
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=YOUR_API_KEY`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c56387a48d04baac0d5143e20f54338e`);
     const data = await response.json();
     setWeatherData(data);
   }
